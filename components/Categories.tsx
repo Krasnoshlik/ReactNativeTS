@@ -2,16 +2,20 @@ import React from 'react'
 import { Text, Image, TouchableHighlight, View } from 'react-native'
 
 import { COLORS, SIZES } from '../constants/constants'
-import { popular } from '../popular'
+import { categories } from '../categories'
 
-const Popular = ({handlePressCart}) => {
+const Categories = ({handlePressCart}:{handlePressCart: any}) => {
 	return (
-		<View style={{ paddingTop: 20 }}>
+		<View style={{ paddingTop: 60 }}>
 			<Text
 				style={{ fontSize: SIZES.h1, fontWeight: 'bold', color: COLORS.white }}
 			>
-				Popular
+				Hey,
 			</Text>
+			<Text style={{ fontSize: SIZES.h1, color: COLORS.white }}>
+				what's up?
+			</Text>
+
 			<View
 				style={{
 					marginTop: 30,
@@ -20,9 +24,9 @@ const Popular = ({handlePressCart}) => {
 					justifyContent: 'space-between',
 				}}
 			>
-				{popular.map((product, idx) => (
+				{categories.map((cat, idx) => (
 					<View
-						key={`popular ${idx}`}
+						key={`categories ${idx}`}
 						style={{
 							width: '30%',
 							marginBottom: 20,
@@ -32,7 +36,7 @@ const Popular = ({handlePressCart}) => {
 						onPress={handlePressCart}
 							underlayColor={COLORS.secondary}
 							style={{
-								height: 120,
+								height: 100,
 								justifyContent: 'center',
 								borderRadius: SIZES.radius,
 								paddingLeft: 5,
@@ -42,7 +46,7 @@ const Popular = ({handlePressCart}) => {
 						>
 							<View style={{ alignItems: 'center' }}>
 								<Image
-									source={{ uri: product.image }}
+									source={{ uri: cat.image }}
 									style={{ width: 40, height: 40 }}
 								/>
 								<Text
@@ -53,17 +57,7 @@ const Popular = ({handlePressCart}) => {
 										textAlign: 'center',
 									}}
 								>
-									{product.name}
-								</Text>
-								<Text
-									style={{
-										fontSize: SIZES.h4,
-										color: COLORS.primary,
-										marginTop: 10,
-										textAlign: 'center',
-									}}
-								>
-									{product.price}
+									{cat.name}
 								</Text>
 							</View>
 						</TouchableHighlight>
@@ -74,4 +68,4 @@ const Popular = ({handlePressCart}) => {
 	)
 }
 
-export default Popular
+export default Categories

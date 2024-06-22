@@ -2,20 +2,16 @@ import React from 'react'
 import { Text, Image, TouchableHighlight, View } from 'react-native'
 
 import { COLORS, SIZES } from '../constants/constants'
-import { categories } from '../categories'
+import { popular } from '../popular'
 
-const Categories = ({handlePressCart}) => {
+const Popular = ({handlePressCart}:{handlePressCart: any}) => {
 	return (
-		<View style={{ paddingTop: 60 }}>
+		<View style={{ paddingTop: 20 }}>
 			<Text
 				style={{ fontSize: SIZES.h1, fontWeight: 'bold', color: COLORS.white }}
 			>
-				Hey,
+				Popular
 			</Text>
-			<Text style={{ fontSize: SIZES.h1, color: COLORS.white }}>
-				what's up?
-			</Text>
-
 			<View
 				style={{
 					marginTop: 30,
@@ -24,9 +20,9 @@ const Categories = ({handlePressCart}) => {
 					justifyContent: 'space-between',
 				}}
 			>
-				{categories.map((cat, idx) => (
+				{popular.map((product, idx) => (
 					<View
-						key={`categories ${idx}`}
+						key={`popular ${idx}`}
 						style={{
 							width: '30%',
 							marginBottom: 20,
@@ -36,7 +32,7 @@ const Categories = ({handlePressCart}) => {
 						onPress={handlePressCart}
 							underlayColor={COLORS.secondary}
 							style={{
-								height: 100,
+								height: 120,
 								justifyContent: 'center',
 								borderRadius: SIZES.radius,
 								paddingLeft: 5,
@@ -46,7 +42,7 @@ const Categories = ({handlePressCart}) => {
 						>
 							<View style={{ alignItems: 'center' }}>
 								<Image
-									source={{ uri: cat.image }}
+									source={{ uri: product.image }}
 									style={{ width: 40, height: 40 }}
 								/>
 								<Text
@@ -57,7 +53,17 @@ const Categories = ({handlePressCart}) => {
 										textAlign: 'center',
 									}}
 								>
-									{cat.name}
+									{product.name}
+								</Text>
+								<Text
+									style={{
+										fontSize: SIZES.h4,
+										color: COLORS.primary,
+										marginTop: 10,
+										textAlign: 'center',
+									}}
+								>
+									{product.price}
 								</Text>
 							</View>
 						</TouchableHighlight>
@@ -68,4 +74,4 @@ const Categories = ({handlePressCart}) => {
 	)
 }
 
-export default Categories
+export default Popular

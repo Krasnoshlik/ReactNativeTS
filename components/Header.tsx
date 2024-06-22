@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, TouchableHighlight, TouchableOpacity, View, Text } from 'react-native';
 
-const Header = ({counter}) => {
+const Header = ({counter}:{counter: number}) => {
     return (
         <View
             style={{
