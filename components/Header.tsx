@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, TouchableHighlight, TouchableOpacity, View, Text } from 'react-native';
 
-const Header = ({counter}:{counter: number}) => {
+const Header = () => {
     return (
         <View
             style={{
@@ -15,29 +15,19 @@ const Header = ({counter}:{counter: number}) => {
                 <TouchableHighlight
                     underlayColor="rgba(0,0,0,0.1)" 
                 >
-                    <Image
-                        source={{
-                            uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/2339px-McDonald%27s_Golden_Arches.svg.png',
-                        }}
-                        style={{
-                            width: 51,
-                            height: 45,
-                        }}
-                    />
+                    <Text style={{fontSize: 45, fontStyle: 'italic', fontWeight: 'bold',color: '#3C2F2F'}}>Foodgo</Text>
                 </TouchableHighlight>
+                <Text style={{fontSize: 18, fontWeight: 'medium', color:'#6A6A6A'}}>Order your favourite food!</Text>
             </View>
             <TouchableOpacity>
                 <View style={{ alignItems: 'center',display: 'flex' }}>
                     <Image
-                        source={{
-                            uri: 'https://findicons.com/files/icons/1700/2d/512/cart.png',
-                        }}
+                        source={require('../assets/user.png')}
                         style={{
-                            width: 45,
-                            height: 45,
+                            width: 60,
+                            height: 60,
                         }}
                     />
-                    <Text style={{ color: 'white', fontSize: 18 }}>{counter}</Text>
                 </View>
             </TouchableOpacity>
         </View>

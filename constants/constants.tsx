@@ -1,8 +1,7 @@
 export const COLORS = {
 	primary: '#F2CA46',
 	secondary: '#EE1C0E',
-
-	white: '#FCFCFC',
+	white: '#FFFFFF',
 	black: '#000000',
 	gray: '#111111',
 }
@@ -25,3 +24,4 @@ export const SIZES = {
 	body4: 14,
 	body5: 12,
 }
+
