@@ -10,8 +10,6 @@ export default function TabLayout() {
         tabBarInactiveTintColor: '#FFFFFF',
         tabBarStyle: {
           backgroundColor: '#EF2A39',
-          borderTopColor: '#ddd',
-          borderTopWidth: 1,
           height: 70,
           paddingBottom: 10,
           paddingTop: 10,
@@ -24,7 +22,7 @@ export default function TabLayout() {
           marginBottom: 5,
         },
         tabBarIconStyle: {
-          size: 28, 
+          width: 28, 
         },
         headerShown: false,
       }}

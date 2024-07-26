@@ -17,7 +17,7 @@ export default function Settings() {
 			}}
 		>
 			<View>
-			<Text style={{color: 'white',fontSize: 25}}>Settings in development yet</Text>
+			<Text style={{color: 'white',fontSize: 25}}>Settings in development</Text>
 			</View>
 		</View>
 	)

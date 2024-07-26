@@ -8,8 +8,8 @@ import InputAndFilter from "@/components/InputAndFilter";
 export default function App() {
   return (
     <ScrollView
-      style={{ flex: 1, marginTop: 30 }}
-      contentContainerStyle={{ paddingHorizontal: 10 }}
+      style={{ flex: 1, marginTop: 0 }}
+      contentContainerStyle={{ paddingHorizontal: 0 }}
       showsVerticalScrollIndicator={false}
     >
       <View

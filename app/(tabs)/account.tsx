@@ -17,7 +17,7 @@ export default function Account() {
 			}}
 		>
 			<View>
-			<Text style={{color: 'white',fontSize: 25}}>Account in development yet</Text>
+			<Text style={{color: 'white',fontSize: 25}}>Account in development</Text>
 			</View>
 		</View>
 	)
